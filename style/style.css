@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header{
+    padding: 10px;
+    width: 100%;
+    box-shadow: 1px 1px 4px #505050;
+    position:fixed;
+    background-color: #fff;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    transition: all 500ms;
+}
+
+.header header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header header .logo a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #facc5c;
+}
+
+.header header .logo a h1{
+    font-size: 34px;
+    transition: all 300ms;
+}
+
+.header header .logo a h1:hover{
+    color: #505050;
+}
+
+.header header .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header header .nav a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #505050;
+}
+
+.header header .nav a h2{
+    font-size: 20px;
+    margin: 0px 20px;
+    transition: all 300ms;
+}
+
+.header header .nav a h2:hover{
+    color: #facc5c;
+}
+
+.section section .info2{
+    margin-top: 160px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.section section .info2 h1{
+    font-size: 55px;
+    color: #facc5c;
+}
+
+.section section .info2 p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 23px;
+    color: #505050;
+}
+
+.section section .info2 a input{
+    padding: 0.6em 2em;
+    font-size: 1.3em;
+    background-color: #facc5c;
+    color: #505050;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 300ms;
+}
+
+.section section .info2 a input:hover{
+    background-color: #505050;
+    color: #facc5c;
+    box-shadow: 0.1em 0.2em 0.3em  rgba( 0, 0, 0, 0.5);
+}
+
+.container__slider{
+    max-width: 1000px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+.container{
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 600px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, transparent, rgba(0,0,0,0.4));
+}
+
+.card{
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    user-select: none;
+
+
+
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+
+#item-2:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-3,
+#item-3:checked ~ .cards #selector-2{
+    transform: translateX(-40%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-3:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-2,
+#item-2:checked ~ .cards #selector-3{
+    transform: translateX(40%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #selector-1,
+#item-2:checked ~ .cards #selector-2,
+#item-3:checked ~ .cards #selector-3{
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+
+.section__about__us{
+    max-width: 1400px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+.section__about__us hr{
+    margin: auto;
+    width: 5%;
+    color: 1px solid #505050;
+    margin-bottom: 1em;
+}
+
+.section__about__us #about__us{
+    padding: 80px;
+    font-size: 1.3em;
+}
+
+.section__about__us #about__us h2{
+    font-size: 30px;
+}
+
+.section__about__us #about__us p{
+    font-size: 1em;
+}
+
+.contact__us{
+    margin-top: -40px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.contact__us hr{
+    margin: auto;
+    width: 5%;
+    color: 1px solid #facc5c;
+    margin-bottom: 1em;
+}
+
+.contact__us h2{
+    font-size: 30px;
+}
+
+.google__map{
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+}
+
+.google__map p iframe{
+    width: 900px;
+    height: 600px;
+}
+
+.caption{
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.caption .caption__address{
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.caption .caption__address h2{
+    font-size: 30px;
+}
+
+.caption .caption__address input{
+    margin-top: 20px;
+    padding: 0.6em 2em;
+    font-size: 1.3em;
+    background-color: #facc5c;
+    color: #505050;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.caption .caption__address input:hover{
+    background-color: #505050;
+    color: #facc5c;
+    box-shadow: 0.1em 0.2em 0.3em  rgba( 0, 0, 0, 0.5);
+}
+
+.caption .caption__address{
+    flex-wrap: wrap;
+}
+
+.caption .caption__address p{
+    margin-top: 20px;
+}
+
+.caption .caption__calendar{
+    text-align: center;
+}
+
+.caption .caption__calendar h2{
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.caption .caption__calendar ul{
+    margin-top: 20px;
+    list-style: none;
+}
+
+.caption .caption__calendar ul li{
+    margin-bottom: 10px;
+}
+
+.footer hr{
+    margin: 80px;
+}
+
+.footer footer{
+    margin: auto;
+    padding-bottom: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer footer img{
+    width: 50px;
+    height: 50px;
+}
